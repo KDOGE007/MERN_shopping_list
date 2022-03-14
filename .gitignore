@@ -1,0 +1,6 @@
+#ignore config folder
+config
+node_modules
+client
+
+note.txt
