@@ -1,5 +1,5 @@
 #ignore config folder
-config
+config/secret.js
 node_modules
 client
 
