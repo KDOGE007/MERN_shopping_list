@@ -1,6 +1,7 @@
 #ignore config folder
-config/secret.js
+
 node_modules
-client
+
+.env
 
 note.txt

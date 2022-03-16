@@ -1,5 +1,5 @@
-import { PASS, USER_NAME, DATA_BASE_NAME } from './secret'
+require('dotenv').config()
 
 module.exports = {
-  mongoURI: `mongodb+srv://${USER_NAME}:${PASS}@${DATA_BASE_NAME}.rb0un.mongodb.net/MernShoppingList?retryWrites=true&w=majority`,
+  mongoURI: `mongodb+srv://${process.env.USER_NAME}:${process.env.PASS}@${process.env.DATA_BASE_NAME}.rb0un.mongodb.net/MernShoppingList?retryWrites=true&w=majority`,
 }
