@@ -24,3 +24,8 @@
 .crossed-line {
   text-decoration: line-through;
 }
+
+#root {
+  height: 100vh;
+  background-color: #ffe8d6;
+}
