@@ -36,4 +36,19 @@ router.delete('/:id', (req, res) => {
     .catch((err) => res.status(404).json({ success: false }))
 })
 
+// @route PUT api/items/:id
+// @desc Update An Item
+// @access Public
+router.put('/:id', async (req, res) => {
+  try {
+    const item = await Item.findByIdAndUpdate(req.params.id, req.body, {
+      runValidators: true,
+      new: true,
+    })
+    await item.save().then((item) => res.json(item))
+  } catch (err) {
+    res.status(404).json({ success: false })
+  }
+})
+
 module.exports = router

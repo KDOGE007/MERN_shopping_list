@@ -36,17 +36,12 @@ export const deleteItem = (id) => (dispatch) => {
 }
 
 export const editItem = (item, id) => (dispatch) => {
-  axios
-    .put(`/api/items/${id}`, item)
-    .then((res) =>
-      dispatch({
-        type: UPDATE_ITEM,
-        payload: { item, id },
-      })
-    )
-    .catch(function (error) {
-      console.log(error.toJSON())
+  axios.put(`/api/items/${id}`, item).then((res) =>
+    dispatch({
+      type: UPDATE_ITEM,
+      payload: { item, id },
     })
+  )
 }
 
 export const setItemLoading = () => {
